@@ -7,11 +7,9 @@ import { appRoutes } from './routes'
 const app = Fastify()
  
 
-app.register(cors) //Fazendo isso, ele vai permitir que qualquer aplicação consuma os dados do back. Se eu quiser selecionar uam especifica, faço:
+app.register(cors) 
 app.register(appRoutes)
-// app.register(cors, {
-//     origin: ['https://localhost:333']
-// }) 
+
  
 
 app.listen({
